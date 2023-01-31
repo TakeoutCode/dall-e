@@ -32,7 +32,7 @@ const Home = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          'https://dall-e.takeoutcode.com/api/v1/post',
+          'https://dall-e-api.takeoutcode.com/api/v1/post',
           {
             method: 'GET',
             headers: {
