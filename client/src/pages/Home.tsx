@@ -1,18 +1,26 @@
 import React, { useState, useEffect, ChangeEvent, FC } from 'react';
 import { Loader, Card, FormField } from '@components/index';
 import { ImageAi } from '@interfaces/index';
-interface RenderCards {
+
+interface Props {
   data: ImageAi[];
   title: string;
 }
-const RenderCards = ({ data, title }) => {
+const RenderCards: FC<Props> = ({ data, title }) => {
   if (data?.length > 0) {
-    return data.map((post: ImageAi) => <Card key={post._id} {...post} />);
+    return (
+      <>
+        {data.map((post: ImageAi) => (
+          <Card key={post._id} {...post} />
+        ))}
+      </>
+    );
   }
   return (
     <h2 className='mt-5 font-bold text-[#6448ff] text-xl uppercase'>{title}</h2>
   );
 };
+
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState<ImageAi[]>([]);
