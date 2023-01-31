@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "target": "es6",
+    "module": "commonJS",
+    "strict": true,
+    "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@mongodb/*": [
+        "mongodb/*"
+      ],
+      "@routes/*": [
+        "routes/*"
+      ],
+    }
+  },
+ 
+  "exclude": [
+      "node_modules"
+  ]
+}
