@@ -9,8 +9,18 @@ import dalleRoutes from '@routes/dalleRoutes';
 
 dotenv.config();
 const app = express();
+app.use(express.json());
 
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:8080/',
+  'https://dall-e-api.takeoutcode.com/',
+];
+
+const options: cors.CorsOptions = {
+  origin: allowedOrigins,
+};
+
+app.use(cors(options));
 app.use(express.json({ limit: '50mb' }));
 
 app.use('/api/v1/post', postRoutes);
@@ -24,7 +34,9 @@ const startServer = () => {
   try {
     connectDB(process.env.MONGODB_URL || '');
     app.listen(8080, () => {
-      console.log('server has started on port http://localhost:8080');
+      console.log(
+        'server has started on port https://dall-e-api.takeoutcode.com'
+      );
     });
   } catch (error) {
     console.log(error);
