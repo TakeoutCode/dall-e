@@ -9,6 +9,16 @@ Con DALL-E Clone, los usuarios pueden introducir una descripción de la imagen q
 
 ## Como utilizar DALL-E:
 
+### Requisitos
+- Node.js
+- yarn
+> Para este proyecto se utilizó yarn como administrador de paquetes.
+> En caso de no tener yarn, puedes instalarlo con el siguiente comando:
+
+```
+npm install --global yarn
+```
+
 - generar los modulos de node y levantar la app:
 
 ```text
