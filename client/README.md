@@ -1,8 +1,13 @@
-# Next.js Teslo App
+# DALL-E
 
 Con DALL-E Clone, los usuarios pueden introducir una descripción de la imagen que desean crear y la aplicación generará una imagen que coincida con la descripción. Las imágenes generadas pueden compartirse fácilmente en redes sociales o descargarse para uso personal.
 
-## Como utilizar DALL-E Clone:
+### Tecnologías usadas
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React.js](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+## Como utilizar DALL-E:
 
 - generar los modulos de node y levantar la app:
 
