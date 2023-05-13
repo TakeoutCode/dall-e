@@ -1,22 +1,45 @@
-# Node Teslo App
+# Backend DALL-E
 
-Este proyecto es un backend para una aplicación web que funciona como un clon de DALL-E, el cual permite crear imágenes a partir de texto utilizando la API de OpenAI.
+##### _DALL-E Clone es una aplicación web que permite a los usuarios crear imágenes a partir de texto, compartirlas y descargarlas. La aplicación está basada en la tecnología DALL-E desarrollada por OpenAI y utiliza una combinación de React, Node y Typescript.Con DALL-E Clone, los usuarios pueden introducir una descripción de la imagen que desean crear y la aplicación generará una imagen que coincida con la descripción. Las imágenes generadas pueden compartirse fácilmente en redes sociales o descargarse para uso personal._
 
-## Configurar las variables de entorno
+##### Visita la página web oficial de [DALL-E](https://dall-e.takeoutcode.com/)
 
-Antes de poder ejecutar la aplicación, es necesario configurar las siguientes variables de entorno:
+### Tecnologías usadas
 
-1. Renombra el archivo **.env.template** a **.env** y configura los siguientes valores:
-   
-    - API Key, API Secret y Cloud name de Cloudinary: estos valores se pueden obtener creando una cuenta en "https://cloudinary.com/".
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-    - Base de datos de MongoDB: necesitarás crear una cuenta en "https://www.mongodb.com/" y configurar tu conexión de base de datos.
+# Requisitos
+- Node.js
+- yarn
+> Para este proyecto se utilizó yarn como administrador de paquetes.
+> En caso de no tener yarn, puedes instalarlo con el siguiente comando:
 
-    - API Key de OpenAI: para generar tus claves, debes crear una cuenta en "https://platform.openai.com/account/api-keys."
+```
+npm install --global yarn
+```
 
-2. Después de configurar las variables de entorno, reconstruye los módulos de Node y levanta la aplicación utilizando los siguientes comandos:
+#### _Instalación de dependencias_
 
-```bash
-  yarn install
+```
+yarn install
+```
+# _Renombra el archivo para las variables de entonrno_
+En la raiz del proyecto, renombra el archivo **.env.template** a **.env.local**
+
+Después del símbolo =, debes agregar lo valores de tus variables de entorno. A continuación, te comparto dónde encontrarás las claves:
+
+| Variable de entorno | Ejemplo | Descripcion |
+| --- | --- | ---|
+OPENAI_API_KEY= | API-OpenAI | API Key que nos proporciona [OpenAI](https://openai.com/blog/openai-api)
+MONGO_URL= | Url-database | Password de la base de datos de [Mongo](https://www.mongodb.com/)
+CLOUDINARY_CLOUD_NAME= | Cloud-Name-Cloudinary | Cloud Name que nos proporciona [Cloudinary](https://cloudinary.com/)
+CLOUDINARY_API_KEY= | API-Key-Cloudinary | API Key que nos proporciona [Cloudinary](https://cloudinary.com/)
+CLOUDINARY_API_SECRET== | Secret-Cloudinary | Secret que nos proporciona [Cloudinary](https://cloudinary.com/)
+
+Una vez que tengas las claves, agrega cada una a su respectivo campo sin agregar espacios ni comillas de ningún tipo.
+
+#### _Inicializar app_
+```
   yarn dev
 ```
